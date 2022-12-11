@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/insira_seu_email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:hint="Insira seu email"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:text="Password:"
+        android:layout_marginBottom="10dp"
+
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/insira_pass"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Insira a sua password:"
+        android:gravity="center"
+        android:inputType="textPassword"
+         />
+
+    <Button
+        android:id="@+id/butao"
+        android:layout_width="370dp"
+        android:layout_height="77dp"
+        android:gravity="center"
+        android:text="Login"
+        android:onClick="login"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/butao2"
+        android:layout_width="238dp"
+        android:layout_height="77dp"
+        android:gravity="center"
+        android:text="Sign up"
+        android:textStyle="bold"
+        android:onClick="sign_up"
+        />
+
+
+</LinearLayout>
