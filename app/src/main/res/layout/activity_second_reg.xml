@@ -20,7 +20,7 @@
 
     <EditText
         android:id="@+id/digite_nome"
-        android:layout_width="match_parent"
+        android:layout_width="374dp"
         android:layout_height="58dp"
         android:gravity="center"
         android:hint="Digite o seu nome aqui" />
@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/email_reg"
-        android:layout_width="421dp"
+        android:layout_width="377dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Digite o seu email aqui"
@@ -48,17 +48,18 @@
         android:layout_width="match_parent"
         android:layout_height="49dp"
         android:gravity="center"
-        android:text="Password:"
+        android:text="Palavra-passe:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/insira_pass_reg"
-        android:layout_width="match_parent"
+        android:layout_width="367dp"
         android:layout_height="71dp"
         android:gravity="center"
-        android:hint="Digite o seu password:"
+        android:hint="Digite a palavra-passe"
+        android:inputType="textPassword"
         android:minHeight="48dp" />
 
     <TextView
@@ -66,22 +67,24 @@
         android:layout_width="423dp"
         android:layout_height="56dp"
         android:gravity="center"
-        android:text="Confirme o seu password:"
+        android:text="Confirme a palavra-passe:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/conf_pass_reg"
-        android:layout_width="421dp"
+        android:layout_width="372dp"
         android:layout_height="55dp"
         android:gravity="center"
-        android:hint="Digite novamente o seu password " />
+        android:hint="Digite novamente a palavra-passe"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/butao_register"
-        android:layout_width="295dp"
+        android:layout_width="157dp"
         android:layout_height="58dp"
-        android:text="Resgistrar"
-        android:onClick="Registrar"/>
+        android:layout_marginTop="10dp"
+        android:onClick="Registrar"
+        android:text="Resgistrar" />
 </LinearLayout>

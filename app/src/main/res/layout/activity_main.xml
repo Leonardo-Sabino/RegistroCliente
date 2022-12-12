@@ -21,11 +21,11 @@
 
     <EditText
         android:id="@+id/insira_seu_email"
-        android:layout_width="match_parent"
+        android:layout_width="389dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:hint="Insira seu email"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress" />
 
     <TextView
         android:id="@+id/password"
@@ -41,32 +41,30 @@
 
     <EditText
         android:id="@+id/insira_pass"
-        android:layout_width="match_parent"
+        android:layout_width="369dp"
         android:layout_height="56dp"
-        android:hint="Insira a sua password:"
         android:gravity="center"
-        android:inputType="textPassword"
-         />
+        android:hint="Insira a sua password:"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/butao"
-        android:layout_width="370dp"
-        android:layout_height="77dp"
+        android:layout_width="310dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Login"
         android:onClick="login"
-        android:textStyle="bold"
-        />
+        android:text="Login"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/butao2"
-        android:layout_width="238dp"
-        android:layout_height="77dp"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
         android:gravity="center"
-        android:text="Sign up"
-        android:textStyle="bold"
         android:onClick="sign_up"
-        />
+        android:text="Sign up"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
