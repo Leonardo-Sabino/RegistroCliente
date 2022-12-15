@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     //variaveis para receber os id's
 
@@ -27,17 +27,10 @@ public class MainActivity extends AppCompatActivity{
         email = findViewById(R.id.insira_seu_email);
         password = findViewById(R.id.insira_pass);
 
-        //array que vai receber o array vindo do Second_Reg , passando o nome do array
-        String [] array = getIntent().getStringArrayExtra("Array_nome");
     }
-    /*
-    public String nomes ([String email,int password]){
-
-        return [email,password];
-    }*/
 
     // para aparecer o nome na activity Welcome
-    public static final String email_message = "com.example.android.login.extra.Message";
+    public static final String nome_message = "com.example.android.login.extra.Message";
 
     public void sign_up(View view) {
         Intent intent = new Intent(MainActivity.this, Second_Reg.class);
@@ -49,7 +42,6 @@ public class MainActivity extends AppCompatActivity{
         //para converter para String
         final String mail = email.getText().toString();
         final String pass = password.getText().toString();
-
         //para verificar se os campos estão em branco
         if (TextUtils.isEmpty(mail) || TextUtils.isEmpty(pass)) {
             // msg se os campos ficarem em branco
@@ -59,12 +51,22 @@ public class MainActivity extends AppCompatActivity{
             msg.show();*/
         } else if (!Patterns.EMAIL_ADDRESS.matcher(mail).matches()) { //para verificar se email esta correto
             Toast.makeText(this, "Email inválido", Toast.LENGTH_SHORT).show();
-        } else {
-            Intent intent = new Intent(MainActivity.this, Welcome.class);
-            //para apresentar o email
-            intent.putExtra(email_message, mail);
-            startActivity(intent);
 
+        } else {
+            for (int i = 0; i < db.userList.size(); i++) {
+                User user = db.userList.get(i);
+                String msg;
+                msg = user.getName();
+                if (user.getEmail().equals(mail) && user.getPass().equals(pass)) {
+                    Intent intent = new Intent(MainActivity.this, Welcome.class);
+                    //para apresentar o nome
+                    intent.putExtra(nome_message, msg);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "Verifique se o email ou a password estão corretos!", Toast.LENGTH_SHORT).show();
+                }
+            }
         }
     }
 }
+
