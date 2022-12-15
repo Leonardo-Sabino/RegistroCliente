@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         // para buscar o campo do email e password
         email = findViewById(R.id.insira_seu_email);
         password = findViewById(R.id.insira_pass);
-
     }
 
     // para aparecer o nome na activity Welcome
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-
         //para converter para String
         final String mail = email.getText().toString();
         final String pass = password.getText().toString();
@@ -62,11 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     //para apresentar o nome
                     intent.putExtra(nome_message, msg);
                     startActivity(intent);
-                } else {
-                    Toast.makeText(this, "Verifique se o email ou a password estão corretos!", Toast.LENGTH_SHORT).show();
                 }
             }
         }
     }
 }
-
